@@ -23,7 +23,8 @@ private class FRCDelegate: NSFetchedResultsControllerDelegate {
 public class NSFetchedResultsDynamicArray<T: NSManagedObject>: DynamicArray<NSFetchedResultsSectionDynamicArray<T>> {
   private let frc: NSFetchedResultsController
   private let frcDelegate = FRCDelegate()
-  init<T>(fetchedResultsController: NSFetchedResultsController, type: T) {
+  
+  public init<T>(fetchedResultsController: NSFetchedResultsController, type: T) {
     self.frc = fetchedResultsController
     frc.performFetch(nil)
     let sections = fetchedResultsController.sections as! [NSFetchedResultsSectionInfo]

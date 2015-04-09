@@ -76,8 +76,9 @@
 		CC7C30901AD7311E001B62D5 /* BondPlusCoreData */ = {
 			isa = PBXGroup;
 			children = (
-				CC7C30AC1AD7313B001B62D5 /* Bond Framework */,
 				CC7C30931AD7311E001B62D5 /* BondPlusCoreData.h */,
+				CC7C30AD1AD73151001B62D5 /* Bond+NSFetchedResultsController.swift */,
+				CC7C30AC1AD7313B001B62D5 /* Bond Framework */,
 				CC7C30911AD7311E001B62D5 /* Supporting Files */,
 			);
 			path = BondPlusCoreData;
@@ -111,7 +112,6 @@
 		CC7C30AC1AD7313B001B62D5 /* Bond Framework */ = {
 			isa = PBXGroup;
 			children = (
-				CC7C30AD1AD73151001B62D5 /* Bond+NSFetchedResultsController.swift */,
 				CC7C30AA1AD73139001B62D5 /* Bond.framework */,
 			);
 			name = "Bond Framework";
@@ -426,6 +426,7 @@
 				CC7C30A61AD7311E001B62D5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CC7C30A71AD7311E001B62D5 /* Build configuration list for PBXNativeTarget "BondPlusCoreDataTests" */ = {
 			isa = XCConfigurationList;
@@ -434,6 +435,7 @@
 				CC7C30A91AD7311E001B62D5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

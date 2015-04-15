@@ -1,0 +1,37 @@
+{"store": {
+  "uuid": "2AB5041B-EF80-4910-8105-EC06B978C5DE",
+  "name": "Adlai's Grocery",
+  "items": [{
+    "uuid": "453BC0F3-8A45-4088-B310-CEA7B9E7345A",
+    "name": "Apple",
+    "count": 5,
+    "itemType": "fruit"
+  },{
+    "uuid": "0F2C31C8-76AA-437A-9635-566878685CF7",
+    "name": "Banana",
+    "count": 3,
+    "itemType": "fruit"
+  },{
+    "uuid": "7098D275-8E34-4FD7-BCC5-EDF5C1EDF696",
+    "name": "Cherry",
+    "count": 0,
+    "itemType": "fruit"
+  },{
+    "uuid": "711B826D-C350-4871-990A-24D3C24EE1C9",
+    "name": "Asparagus",
+    "count": 1,
+    "itemType": "veggie"
+  },
+  {
+    "uuid": "1E3EC354-4E7E-4344-9104-CE6ED6A64CA7",
+    "name": "Broccoli",
+    "count": 5,
+    "itemType": "veggie"
+  },{
+    "uuid": "5CBA1D6F-A726-4CB2-80B4-D46CED5B1E5F",
+    "name": "Celery",
+    "count": 10,
+    "itemType": "veggie"
+  }
+]
+}}

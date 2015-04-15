@@ -1,0 +1,12 @@
+PODS:
+  - EasyMapping (0.14.0):
+    - EasyMapping/Core (= 0.14.0)
+  - EasyMapping/Core (0.14.0)
+
+DEPENDENCIES:
+  - EasyMapping (~> 0.14.0)
+
+SPEC CHECKSUMS:
+  EasyMapping: 868dcb7735ce1711fe563fd205ad13f2ae220b8a
+
+COCOAPODS: 0.36.3

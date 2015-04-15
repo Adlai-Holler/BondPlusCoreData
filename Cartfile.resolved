@@ -1,1 +1,4 @@
+github "Alecrim/AlecrimCoreData" "6a09d0195519371b0b15156e970698d7a37ccac6"
 github "adly-holler/Bond" "7e4e5ac6b9292f26758a64a2572fdff92ea8ad5d"
+github "Quick/Nimble" "8927113f877f32c8a01b41b746c4ac261b42c48e"
+github "Quick/Quick" "9e1d2cecced0b9e9439c37226da11bad590ca9fd"

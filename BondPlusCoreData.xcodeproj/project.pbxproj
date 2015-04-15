@@ -7,11 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8BBE5EB2DD56723D9590C5A8 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FA83C6681D341D52B6FE3B7 /* libPods.a */; };
 		CC7C30941AD7311E001B62D5 /* BondPlusCoreData.h in Headers */ = {isa = PBXBuildFile; fileRef = CC7C30931AD7311E001B62D5 /* BondPlusCoreData.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CC7C309A1AD7311E001B62D5 /* BondPlusCoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC7C308E1AD7311E001B62D5 /* BondPlusCoreData.framework */; };
 		CC7C30A11AD7311E001B62D5 /* BondPlusCoreDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7C30A01AD7311E001B62D5 /* BondPlusCoreDataTests.swift */; };
 		CC7C30AB1AD73139001B62D5 /* Bond.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC7C30AA1AD73139001B62D5 /* Bond.framework */; };
 		CC7C30AE1AD73151001B62D5 /* Bond+NSFetchedResultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7C30AD1AD73151001B62D5 /* Bond+NSFetchedResultsController.swift */; };
+		CC86371D1ADF03DD0044EEF4 /* BondPlusCoreDataTests.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CC86371B1ADF03DD0044EEF4 /* BondPlusCoreDataTests.xcdatamodeld */; };
+		CC8637241ADF048B0044EEF4 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8637221ADF048B0044EEF4 /* Item.swift */; };
+		CC8637251ADF048B0044EEF4 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8637231ADF048B0044EEF4 /* Store.swift */; };
+		CC8637271ADF04D80044EEF4 /* ObjectMappings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8637261ADF04D80044EEF4 /* ObjectMappings.swift */; };
+		CC8637291ADF05B20044EEF4 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8637281ADF05B20044EEF4 /* Base.swift */; };
+		CC86372C1ADF07120044EEF4 /* SeedData.json in Resources */ = {isa = PBXBuildFile; fileRef = CC86372B1ADF07120044EEF4 /* SeedData.json */; };
+		CC86372E1ADF197C0044EEF4 /* AlecrimCoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC86372D1ADF197C0044EEF4 /* AlecrimCoreData.framework */; };
+		CC86372F1ADF19850044EEF4 /* AlecrimCoreData.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = CC86372D1ADF197C0044EEF4 /* AlecrimCoreData.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CC9D9D731ADF011C0083C8C5 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC9D9D711ADF011C0083C8C5 /* Nimble.framework */; };
+		CC9D9D741ADF011C0083C8C5 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC9D9D721ADF011C0083C8C5 /* Quick.framework */; };
+		CC9D9D761ADF01250083C8C5 /* Nimble.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = CC9D9D711ADF011C0083C8C5 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CC9D9D771ADF01250083C8C5 /* Quick.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = CC9D9D721ADF011C0083C8C5 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,7 +37,25 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		CC9D9D6F1ADF00550083C8C5 /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CC86372F1ADF19850044EEF4 /* AlecrimCoreData.framework in Copy Frameworks */,
+				CC9D9D761ADF01250083C8C5 /* Nimble.framework in Copy Frameworks */,
+				CC9D9D771ADF01250083C8C5 /* Quick.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		5A497E99CC4E70A4B6C76840 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		9FA83C6681D341D52B6FE3B7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC7C308E1AD7311E001B62D5 /* BondPlusCoreData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BondPlusCoreData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC7C30921AD7311E001B62D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC7C30931AD7311E001B62D5 /* BondPlusCoreData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BondPlusCoreData.h; sourceTree = "<group>"; };
@@ -33,6 +64,17 @@
 		CC7C30A01AD7311E001B62D5 /* BondPlusCoreDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BondPlusCoreDataTests.swift; sourceTree = "<group>"; };
 		CC7C30AA1AD73139001B62D5 /* Bond.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bond.framework; path = Carthage/Build/iOS/Bond.framework; sourceTree = SOURCE_ROOT; };
 		CC7C30AD1AD73151001B62D5 /* Bond+NSFetchedResultsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bond+NSFetchedResultsController.swift"; sourceTree = "<group>"; };
+		CC8637181ADF03470044EEF4 /* BondPlusCoreDataTests-Bridging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BondPlusCoreDataTests-Bridging.h"; sourceTree = "<group>"; };
+		CC86371C1ADF03DD0044EEF4 /* BondPlusCoreDataTests.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BondPlusCoreDataTests.xcdatamodel; sourceTree = "<group>"; };
+		CC8637221ADF048B0044EEF4 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		CC8637231ADF048B0044EEF4 /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		CC8637261ADF04D80044EEF4 /* ObjectMappings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectMappings.swift; sourceTree = "<group>"; };
+		CC8637281ADF05B20044EEF4 /* Base.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
+		CC86372B1ADF07120044EEF4 /* SeedData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SeedData.json; sourceTree = "<group>"; };
+		CC86372D1ADF197C0044EEF4 /* AlecrimCoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlecrimCoreData.framework; path = Carthage/Build/iOS/AlecrimCoreData.framework; sourceTree = SOURCE_ROOT; };
+		CC9D9D711ADF011C0083C8C5 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = SOURCE_ROOT; };
+		CC9D9D721ADF011C0083C8C5 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = SOURCE_ROOT; };
+		CF6FE8EE1A2BB54431B7993D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,18 +91,41 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC7C309A1AD7311E001B62D5 /* BondPlusCoreData.framework in Frameworks */,
+				CC9D9D731ADF011C0083C8C5 /* Nimble.framework in Frameworks */,
+				CC9D9D741ADF011C0083C8C5 /* Quick.framework in Frameworks */,
+				8BBE5EB2DD56723D9590C5A8 /* libPods.a in Frameworks */,
+				CC86372E1ADF197C0044EEF4 /* AlecrimCoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		503EAEA1A84DCEB1518990E3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5A497E99CC4E70A4B6C76840 /* Pods.debug.xcconfig */,
+				CF6FE8EE1A2BB54431B7993D /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		95225210CDFE30E999A0151A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9FA83C6681D341D52B6FE3B7 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CC7C30841AD7311E001B62D5 = {
 			isa = PBXGroup;
 			children = (
 				CC7C30901AD7311E001B62D5 /* BondPlusCoreData */,
 				CC7C309D1AD7311E001B62D5 /* BondPlusCoreDataTests */,
 				CC7C308F1AD7311E001B62D5 /* Products */,
+				503EAEA1A84DCEB1518990E3 /* Pods */,
+				95225210CDFE30E999A0151A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,7 +160,12 @@
 		CC7C309D1AD7311E001B62D5 /* BondPlusCoreDataTests */ = {
 			isa = PBXGroup;
 			children = (
+				CC86372A1ADF05C10044EEF4 /* Test Model */,
+				CC9D9D751ADF011F0083C8C5 /* Frameworks */,
 				CC7C30A01AD7311E001B62D5 /* BondPlusCoreDataTests.swift */,
+				CC86372B1ADF07120044EEF4 /* SeedData.json */,
+				CC86371B1ADF03DD0044EEF4 /* BondPlusCoreDataTests.xcdatamodeld */,
+				CC8637181ADF03470044EEF4 /* BondPlusCoreDataTests-Bridging.h */,
 				CC7C309E1AD7311E001B62D5 /* Supporting Files */,
 			);
 			path = BondPlusCoreDataTests;
@@ -115,6 +185,27 @@
 				CC7C30AA1AD73139001B62D5 /* Bond.framework */,
 			);
 			name = "Bond Framework";
+			sourceTree = "<group>";
+		};
+		CC86372A1ADF05C10044EEF4 /* Test Model */ = {
+			isa = PBXGroup;
+			children = (
+				CC8637261ADF04D80044EEF4 /* ObjectMappings.swift */,
+				CC8637281ADF05B20044EEF4 /* Base.swift */,
+				CC8637221ADF048B0044EEF4 /* Item.swift */,
+				CC8637231ADF048B0044EEF4 /* Store.swift */,
+			);
+			name = "Test Model";
+			sourceTree = "<group>";
+		};
+		CC9D9D751ADF011F0083C8C5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CC86372D1ADF197C0044EEF4 /* AlecrimCoreData.framework */,
+				CC9D9D711ADF011C0083C8C5 /* Nimble.framework */,
+				CC9D9D721ADF011C0083C8C5 /* Quick.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,9 +244,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CC7C30A71AD7311E001B62D5 /* Build configuration list for PBXNativeTarget "BondPlusCoreDataTests" */;
 			buildPhases = (
+				EA0F2E6D5064883E1F676E52 /* Check Pods Manifest.lock */,
 				CC7C30951AD7311E001B62D5 /* Sources */,
 				CC7C30961AD7311E001B62D5 /* Frameworks */,
 				CC7C30971AD7311E001B62D5 /* Resources */,
+				CC9D9D6F1ADF00550083C8C5 /* Copy Frameworks */,
+				A7E1CB85F5B6E59612C67682 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -214,10 +308,44 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC86372C1ADF07120044EEF4 /* SeedData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A7E1CB85F5B6E59612C67682 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA0F2E6D5064883E1F676E52 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CC7C30891AD7311E001B62D5 /* Sources */ = {
@@ -232,7 +360,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC8637291ADF05B20044EEF4 /* Base.swift in Sources */,
 				CC7C30A11AD7311E001B62D5 /* BondPlusCoreDataTests.swift in Sources */,
+				CC8637271ADF04D80044EEF4 /* ObjectMappings.swift in Sources */,
+				CC8637241ADF048B0044EEF4 /* Item.swift in Sources */,
+				CC86371D1ADF03DD0044EEF4 /* BondPlusCoreDataTests.xcdatamodeld in Sources */,
+				CC8637251ADF048B0044EEF4 /* Store.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,10 +512,12 @@
 		};
 		CC7C30A81AD7311E001B62D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A497E99CC4E70A4B6C76840 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -391,19 +526,23 @@
 				INFOPLIST_FILE = BondPlusCoreDataTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BondPlusCoreDataTests/BondPlusCoreDataTests-Bridging.h";
 			};
 			name = Debug;
 		};
 		CC7C30A91AD7311E001B62D5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF6FE8EE1A2BB54431B7993D /* Pods.release.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = BondPlusCoreDataTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BondPlusCoreDataTests/BondPlusCoreDataTests-Bridging.h";
 			};
 			name = Release;
 		};
@@ -438,6 +577,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CC86371B1ADF03DD0044EEF4 /* BondPlusCoreDataTests.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CC86371C1ADF03DD0044EEF4 /* BondPlusCoreDataTests.xcdatamodel */,
+			);
+			currentVersion = CC86371C1ADF03DD0044EEF4 /* BondPlusCoreDataTests.xcdatamodel */;
+			path = BondPlusCoreDataTests.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = CC7C30851AD7311E001B62D5 /* Project object */;
 }

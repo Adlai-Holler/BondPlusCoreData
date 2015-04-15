@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7549" systemVersion="14D131" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Base" representedClassName="Base" isAbstract="YES" syncable="YES">
+        <attribute name="uuid" attributeType="String" indexed="YES" syncable="YES"/>
+    </entity>
+    <entity name="Item" representedClassName="Item" parentEntity="Base" syncable="YES">
+        <attribute name="count" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="itemType" attributeType="String" syncable="YES"/>
+        <attribute name="name" attributeType="String" defaultValueString="(unnamed)" syncable="YES"/>
+        <relationship name="store" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Store" inverseName="items" inverseEntity="Store" syncable="YES"/>
+    </entity>
+    <entity name="Store" representedClassName="Store" parentEntity="Base" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="items" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Item" inverseName="store" inverseEntity="Item" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Item" positionX="-63" positionY="-18" width="128" height="105"/>
+        <element name="Store" positionX="-54" positionY="-9" width="128" height="75"/>
+        <element name="Base" positionX="-36" positionY="36" width="128" height="60"/>
+    </elements>
+</model>

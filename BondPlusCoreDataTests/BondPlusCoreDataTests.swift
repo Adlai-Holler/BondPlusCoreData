@@ -59,11 +59,13 @@ class NSFetchedResultsDynamicArraySpec: QuickSpec {
       var sectionBond: ArrayBond<NSFetchedResultsSectionDynamicArray<Item>>!
 
       beforeEach {
-        let request = NSFetchRequest(entityName: "Item")
         let importantStore = context.stores.filterBy(attribute: "uuid", value: "2AB5041B-EF80-4910-8105-EC06B978C5DE").first()!
-        request.predicate = NSPredicate(format: "store = %@", importantStore)
-        request.sortDescriptors = [ NSSortDescriptor(key: "itemType", ascending: true), NSSortDescriptor(key: "name", ascending: true) ]
-        let frc = NSFetchedResultsController(fetchRequest: request, managedObjectContext: context.managedObjectContext, sectionNameKeyPath: "itemType", cacheName: nil)
+        let fr = context.items
+          .filterBy(attribute: "store", value: importantStore)
+          .sortBy("itemType", ascending: true)
+          .thenByAscending("name")
+          .toFetchRequest()
+        let frc = NSFetchedResultsController(fetchRequest: fr, managedObjectContext: context.managedObjectContext, sectionNameKeyPath: "itemType", cacheName: nil)
         array = NSFetchedResultsDynamicArray(fetchedResultsController: frc)
         sectionBond = ArrayBond()
         array ->> sectionBond

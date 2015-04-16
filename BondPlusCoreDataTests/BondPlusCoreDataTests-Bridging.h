@@ -1,2 +1,2 @@
 
-#import <EasyMapping/EasyMapping.h>
+#import "EasyMapping.h"

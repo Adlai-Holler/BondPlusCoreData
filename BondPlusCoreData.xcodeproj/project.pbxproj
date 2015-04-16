@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8BBE5EB2DD56723D9590C5A8 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FA83C6681D341D52B6FE3B7 /* libPods.a */; };
 		CC7C30941AD7311E001B62D5 /* BondPlusCoreData.h in Headers */ = {isa = PBXBuildFile; fileRef = CC7C30931AD7311E001B62D5 /* BondPlusCoreData.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CC7C309A1AD7311E001B62D5 /* BondPlusCoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC7C308E1AD7311E001B62D5 /* BondPlusCoreData.framework */; };
 		CC7C30A11AD7311E001B62D5 /* BondPlusCoreDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7C30A01AD7311E001B62D5 /* BondPlusCoreDataTests.swift */; };
@@ -21,6 +20,21 @@
 		CC86372C1ADF07120044EEF4 /* SeedData.json in Resources */ = {isa = PBXBuildFile; fileRef = CC86372B1ADF07120044EEF4 /* SeedData.json */; };
 		CC86372E1ADF197C0044EEF4 /* AlecrimCoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC86372D1ADF197C0044EEF4 /* AlecrimCoreData.framework */; };
 		CC86372F1ADF19850044EEF4 /* AlecrimCoreData.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = CC86372D1ADF197C0044EEF4 /* AlecrimCoreData.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CC863C361ADF33F00044EEF4 /* EKCoreDataImporter.m in Sources */ = {isa = PBXBuildFile; fileRef = CC863C1A1ADF33F00044EEF4 /* EKCoreDataImporter.m */; };
+		CC863C371ADF33F00044EEF4 /* EKManagedObjectMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = CC863C1C1ADF33F00044EEF4 /* EKManagedObjectMapper.m */; };
+		CC863C381ADF33F00044EEF4 /* EKManagedObjectMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = CC863C1E1ADF33F00044EEF4 /* EKManagedObjectMapping.m */; };
+		CC863C391ADF33F00044EEF4 /* EKManagedObjectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CC863C201ADF33F00044EEF4 /* EKManagedObjectModel.m */; };
+		CC863C3A1ADF33F00044EEF4 /* EKMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = CC863C221ADF33F00044EEF4 /* EKMapper.m */; };
+		CC863C3B1ADF33F00044EEF4 /* EKMappingBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = CC863C241ADF33F00044EEF4 /* EKMappingBlocks.m */; };
+		CC863C3C1ADF33F00044EEF4 /* EKObjectMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = CC863C271ADF33F00044EEF4 /* EKObjectMapping.m */; };
+		CC863C3D1ADF33F00044EEF4 /* EKObjectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CC863C291ADF33F00044EEF4 /* EKObjectModel.m */; };
+		CC863C3E1ADF33F00044EEF4 /* EKPropertyHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CC863C2B1ADF33F00044EEF4 /* EKPropertyHelper.m */; };
+		CC863C3F1ADF33F00044EEF4 /* EKPropertyMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = CC863C2D1ADF33F00044EEF4 /* EKPropertyMapping.m */; };
+		CC863C401ADF33F00044EEF4 /* EKRelationshipMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = CC863C2F1ADF33F00044EEF4 /* EKRelationshipMapping.m */; };
+		CC863C411ADF33F00044EEF4 /* EKSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = CC863C311ADF33F00044EEF4 /* EKSerializer.m */; };
+		CC863C421ADF33F00044EEF4 /* NSArray+FlattenArray.m in Sources */ = {isa = PBXBuildFile; fileRef = CC863C331ADF33F00044EEF4 /* NSArray+FlattenArray.m */; };
+		CC863C431ADF33F00044EEF4 /* NSDateFormatter+EasyMappingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CC863C351ADF33F00044EEF4 /* NSDateFormatter+EasyMappingAdditions.m */; };
+		CC863C441ADF34BB0044EEF4 /* Bond.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = CC7C30AA1AD73139001B62D5 /* Bond.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CC9D9D731ADF011C0083C8C5 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC9D9D711ADF011C0083C8C5 /* Nimble.framework */; };
 		CC9D9D741ADF011C0083C8C5 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC9D9D721ADF011C0083C8C5 /* Quick.framework */; };
 		CC9D9D761ADF01250083C8C5 /* Nimble.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = CC9D9D711ADF011C0083C8C5 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -44,6 +58,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				CC863C441ADF34BB0044EEF4 /* Bond.framework in Copy Frameworks */,
 				CC86372F1ADF19850044EEF4 /* AlecrimCoreData.framework in Copy Frameworks */,
 				CC9D9D761ADF01250083C8C5 /* Nimble.framework in Copy Frameworks */,
 				CC9D9D771ADF01250083C8C5 /* Quick.framework in Copy Frameworks */,
@@ -72,6 +87,36 @@
 		CC8637281ADF05B20044EEF4 /* Base.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
 		CC86372B1ADF07120044EEF4 /* SeedData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SeedData.json; sourceTree = "<group>"; };
 		CC86372D1ADF197C0044EEF4 /* AlecrimCoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlecrimCoreData.framework; path = Carthage/Build/iOS/AlecrimCoreData.framework; sourceTree = SOURCE_ROOT; };
+		CC863C181ADF33F00044EEF4 /* EasyMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyMapping.h; sourceTree = "<group>"; };
+		CC863C191ADF33F00044EEF4 /* EKCoreDataImporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKCoreDataImporter.h; sourceTree = "<group>"; };
+		CC863C1A1ADF33F00044EEF4 /* EKCoreDataImporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKCoreDataImporter.m; sourceTree = "<group>"; };
+		CC863C1B1ADF33F00044EEF4 /* EKManagedObjectMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKManagedObjectMapper.h; sourceTree = "<group>"; };
+		CC863C1C1ADF33F00044EEF4 /* EKManagedObjectMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKManagedObjectMapper.m; sourceTree = "<group>"; };
+		CC863C1D1ADF33F00044EEF4 /* EKManagedObjectMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKManagedObjectMapping.h; sourceTree = "<group>"; };
+		CC863C1E1ADF33F00044EEF4 /* EKManagedObjectMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKManagedObjectMapping.m; sourceTree = "<group>"; };
+		CC863C1F1ADF33F00044EEF4 /* EKManagedObjectModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKManagedObjectModel.h; sourceTree = "<group>"; };
+		CC863C201ADF33F00044EEF4 /* EKManagedObjectModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKManagedObjectModel.m; sourceTree = "<group>"; };
+		CC863C211ADF33F00044EEF4 /* EKMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKMapper.h; sourceTree = "<group>"; };
+		CC863C221ADF33F00044EEF4 /* EKMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKMapper.m; sourceTree = "<group>"; };
+		CC863C231ADF33F00044EEF4 /* EKMappingBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKMappingBlocks.h; sourceTree = "<group>"; };
+		CC863C241ADF33F00044EEF4 /* EKMappingBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKMappingBlocks.m; sourceTree = "<group>"; };
+		CC863C251ADF33F00044EEF4 /* EKMappingProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKMappingProtocol.h; sourceTree = "<group>"; };
+		CC863C261ADF33F00044EEF4 /* EKObjectMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKObjectMapping.h; sourceTree = "<group>"; };
+		CC863C271ADF33F00044EEF4 /* EKObjectMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKObjectMapping.m; sourceTree = "<group>"; };
+		CC863C281ADF33F00044EEF4 /* EKObjectModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKObjectModel.h; sourceTree = "<group>"; };
+		CC863C291ADF33F00044EEF4 /* EKObjectModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKObjectModel.m; sourceTree = "<group>"; };
+		CC863C2A1ADF33F00044EEF4 /* EKPropertyHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPropertyHelper.h; sourceTree = "<group>"; };
+		CC863C2B1ADF33F00044EEF4 /* EKPropertyHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPropertyHelper.m; sourceTree = "<group>"; };
+		CC863C2C1ADF33F00044EEF4 /* EKPropertyMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPropertyMapping.h; sourceTree = "<group>"; };
+		CC863C2D1ADF33F00044EEF4 /* EKPropertyMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPropertyMapping.m; sourceTree = "<group>"; };
+		CC863C2E1ADF33F00044EEF4 /* EKRelationshipMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKRelationshipMapping.h; sourceTree = "<group>"; };
+		CC863C2F1ADF33F00044EEF4 /* EKRelationshipMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKRelationshipMapping.m; sourceTree = "<group>"; };
+		CC863C301ADF33F00044EEF4 /* EKSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKSerializer.h; sourceTree = "<group>"; };
+		CC863C311ADF33F00044EEF4 /* EKSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKSerializer.m; sourceTree = "<group>"; };
+		CC863C321ADF33F00044EEF4 /* NSArray+FlattenArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+FlattenArray.h"; sourceTree = "<group>"; };
+		CC863C331ADF33F00044EEF4 /* NSArray+FlattenArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+FlattenArray.m"; sourceTree = "<group>"; };
+		CC863C341ADF33F00044EEF4 /* NSDateFormatter+EasyMappingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+EasyMappingAdditions.h"; sourceTree = "<group>"; };
+		CC863C351ADF33F00044EEF4 /* NSDateFormatter+EasyMappingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+EasyMappingAdditions.m"; sourceTree = "<group>"; };
 		CC9D9D711ADF011C0083C8C5 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = SOURCE_ROOT; };
 		CC9D9D721ADF011C0083C8C5 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = SOURCE_ROOT; };
 		CF6FE8EE1A2BB54431B7993D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -93,7 +138,6 @@
 				CC7C309A1AD7311E001B62D5 /* BondPlusCoreData.framework in Frameworks */,
 				CC9D9D731ADF011C0083C8C5 /* Nimble.framework in Frameworks */,
 				CC9D9D741ADF011C0083C8C5 /* Quick.framework in Frameworks */,
-				8BBE5EB2DD56723D9590C5A8 /* libPods.a in Frameworks */,
 				CC86372E1ADF197C0044EEF4 /* AlecrimCoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -198,9 +242,48 @@
 			name = "Test Model";
 			sourceTree = "<group>";
 		};
+		CC863C171ADF33F00044EEF4 /* EasyMapping */ = {
+			isa = PBXGroup;
+			children = (
+				CC863C181ADF33F00044EEF4 /* EasyMapping.h */,
+				CC863C191ADF33F00044EEF4 /* EKCoreDataImporter.h */,
+				CC863C1A1ADF33F00044EEF4 /* EKCoreDataImporter.m */,
+				CC863C1B1ADF33F00044EEF4 /* EKManagedObjectMapper.h */,
+				CC863C1C1ADF33F00044EEF4 /* EKManagedObjectMapper.m */,
+				CC863C1D1ADF33F00044EEF4 /* EKManagedObjectMapping.h */,
+				CC863C1E1ADF33F00044EEF4 /* EKManagedObjectMapping.m */,
+				CC863C1F1ADF33F00044EEF4 /* EKManagedObjectModel.h */,
+				CC863C201ADF33F00044EEF4 /* EKManagedObjectModel.m */,
+				CC863C211ADF33F00044EEF4 /* EKMapper.h */,
+				CC863C221ADF33F00044EEF4 /* EKMapper.m */,
+				CC863C231ADF33F00044EEF4 /* EKMappingBlocks.h */,
+				CC863C241ADF33F00044EEF4 /* EKMappingBlocks.m */,
+				CC863C251ADF33F00044EEF4 /* EKMappingProtocol.h */,
+				CC863C261ADF33F00044EEF4 /* EKObjectMapping.h */,
+				CC863C271ADF33F00044EEF4 /* EKObjectMapping.m */,
+				CC863C281ADF33F00044EEF4 /* EKObjectModel.h */,
+				CC863C291ADF33F00044EEF4 /* EKObjectModel.m */,
+				CC863C2A1ADF33F00044EEF4 /* EKPropertyHelper.h */,
+				CC863C2B1ADF33F00044EEF4 /* EKPropertyHelper.m */,
+				CC863C2C1ADF33F00044EEF4 /* EKPropertyMapping.h */,
+				CC863C2D1ADF33F00044EEF4 /* EKPropertyMapping.m */,
+				CC863C2E1ADF33F00044EEF4 /* EKRelationshipMapping.h */,
+				CC863C2F1ADF33F00044EEF4 /* EKRelationshipMapping.m */,
+				CC863C301ADF33F00044EEF4 /* EKSerializer.h */,
+				CC863C311ADF33F00044EEF4 /* EKSerializer.m */,
+				CC863C321ADF33F00044EEF4 /* NSArray+FlattenArray.h */,
+				CC863C331ADF33F00044EEF4 /* NSArray+FlattenArray.m */,
+				CC863C341ADF33F00044EEF4 /* NSDateFormatter+EasyMappingAdditions.h */,
+				CC863C351ADF33F00044EEF4 /* NSDateFormatter+EasyMappingAdditions.m */,
+			);
+			name = EasyMapping;
+			path = Carthage/Checkouts/EasyMapping/EasyMapping;
+			sourceTree = SOURCE_ROOT;
+		};
 		CC9D9D751ADF011F0083C8C5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CC863C171ADF33F00044EEF4 /* EasyMapping */,
 				CC86372D1ADF197C0044EEF4 /* AlecrimCoreData.framework */,
 				CC9D9D711ADF011C0083C8C5 /* Nimble.framework */,
 				CC9D9D721ADF011C0083C8C5 /* Quick.framework */,
@@ -244,12 +327,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CC7C30A71AD7311E001B62D5 /* Build configuration list for PBXNativeTarget "BondPlusCoreDataTests" */;
 			buildPhases = (
-				EA0F2E6D5064883E1F676E52 /* Check Pods Manifest.lock */,
 				CC7C30951AD7311E001B62D5 /* Sources */,
 				CC7C30961AD7311E001B62D5 /* Frameworks */,
 				CC7C30971AD7311E001B62D5 /* Resources */,
 				CC9D9D6F1ADF00550083C8C5 /* Copy Frameworks */,
-				A7E1CB85F5B6E59612C67682 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -314,39 +395,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		A7E1CB85F5B6E59612C67682 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EA0F2E6D5064883E1F676E52 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		CC7C30891AD7311E001B62D5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -362,10 +410,24 @@
 			files = (
 				CC8637291ADF05B20044EEF4 /* Base.swift in Sources */,
 				CC7C30A11AD7311E001B62D5 /* BondPlusCoreDataTests.swift in Sources */,
+				CC863C3B1ADF33F00044EEF4 /* EKMappingBlocks.m in Sources */,
+				CC863C411ADF33F00044EEF4 /* EKSerializer.m in Sources */,
+				CC863C361ADF33F00044EEF4 /* EKCoreDataImporter.m in Sources */,
+				CC863C3E1ADF33F00044EEF4 /* EKPropertyHelper.m in Sources */,
+				CC863C371ADF33F00044EEF4 /* EKManagedObjectMapper.m in Sources */,
 				CC8637271ADF04D80044EEF4 /* ObjectMappings.swift in Sources */,
+				CC863C431ADF33F00044EEF4 /* NSDateFormatter+EasyMappingAdditions.m in Sources */,
+				CC863C381ADF33F00044EEF4 /* EKManagedObjectMapping.m in Sources */,
+				CC863C391ADF33F00044EEF4 /* EKManagedObjectModel.m in Sources */,
 				CC8637241ADF048B0044EEF4 /* Item.swift in Sources */,
+				CC863C421ADF33F00044EEF4 /* NSArray+FlattenArray.m in Sources */,
+				CC863C3A1ADF33F00044EEF4 /* EKMapper.m in Sources */,
+				CC863C401ADF33F00044EEF4 /* EKRelationshipMapping.m in Sources */,
+				CC863C3D1ADF33F00044EEF4 /* EKObjectModel.m in Sources */,
 				CC86371D1ADF03DD0044EEF4 /* BondPlusCoreDataTests.xcdatamodeld in Sources */,
+				CC863C3C1ADF33F00044EEF4 /* EKObjectMapping.m in Sources */,
 				CC8637251ADF048B0044EEF4 /* Store.swift in Sources */,
+				CC863C3F1ADF33F00044EEF4 /* EKPropertyMapping.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,7 +574,6 @@
 		};
 		CC7C30A81AD7311E001B62D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5A497E99CC4E70A4B6C76840 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -532,7 +593,6 @@
 		};
 		CC7C30A91AD7311E001B62D5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CF6FE8EE1A2BB54431B7993D /* Pods.release.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",

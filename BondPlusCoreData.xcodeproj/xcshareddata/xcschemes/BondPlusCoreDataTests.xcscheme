@@ -8,15 +8,15 @@
       <BuildActionEntries>
          <BuildActionEntry
             buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CC7C308D1AD7311E001B62D5"
-               BuildableName = "BondPlusCoreData.framework"
-               BlueprintName = "BondPlusCoreData"
+               BlueprintIdentifier = "CC7C30981AD7311E001B62D5"
+               BuildableName = "BondPlusCoreDataTests.xctest"
+               BlueprintName = "BondPlusCoreDataTests"
                ReferencedContainer = "container:BondPlusCoreData.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,13 +28,23 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "CC7C30981AD7311E001B62D5"
+               BuildableName = "BondPlusCoreDataTests.xctest"
+               BlueprintName = "BondPlusCoreDataTests"
+               ReferencedContainer = "container:BondPlusCoreData.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CC7C308D1AD7311E001B62D5"
-            BuildableName = "BondPlusCoreData.framework"
-            BlueprintName = "BondPlusCoreData"
+            BlueprintIdentifier = "CC7C30981AD7311E001B62D5"
+            BuildableName = "BondPlusCoreDataTests.xctest"
+            BlueprintName = "BondPlusCoreDataTests"
             ReferencedContainer = "container:BondPlusCoreData.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -48,15 +58,6 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CC7C308D1AD7311E001B62D5"
-            BuildableName = "BondPlusCoreData.framework"
-            BlueprintName = "BondPlusCoreData"
-            ReferencedContainer = "container:BondPlusCoreData.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -66,15 +67,6 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CC7C308D1AD7311E001B62D5"
-            BuildableName = "BondPlusCoreData.framework"
-            BlueprintName = "BondPlusCoreData"
-            ReferencedContainer = "container:BondPlusCoreData.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

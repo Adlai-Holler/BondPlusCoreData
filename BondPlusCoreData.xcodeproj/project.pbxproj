@@ -39,6 +39,7 @@
 		CC9D9D741ADF011C0083C8C5 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC9D9D721ADF011C0083C8C5 /* Quick.framework */; };
 		CC9D9D761ADF01250083C8C5 /* Nimble.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = CC9D9D711ADF011C0083C8C5 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CC9D9D771ADF01250083C8C5 /* Quick.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = CC9D9D721ADF011C0083C8C5 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CCD644C11AE06D790071DD3D /* MoreData.json in Resources */ = {isa = PBXBuildFile; fileRef = CCD644C01AE06D790071DD3D /* MoreData.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +120,7 @@
 		CC863C351ADF33F00044EEF4 /* NSDateFormatter+EasyMappingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+EasyMappingAdditions.m"; sourceTree = "<group>"; };
 		CC9D9D711ADF011C0083C8C5 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = SOURCE_ROOT; };
 		CC9D9D721ADF011C0083C8C5 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = SOURCE_ROOT; };
+		CCD644C01AE06D790071DD3D /* MoreData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MoreData.json; sourceTree = "<group>"; };
 		CF6FE8EE1A2BB54431B7993D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -208,6 +210,7 @@
 				CC9D9D751ADF011F0083C8C5 /* Frameworks */,
 				CC7C30A01AD7311E001B62D5 /* BondPlusCoreDataTests.swift */,
 				CC86372B1ADF07120044EEF4 /* SeedData.json */,
+				CCD644C01AE06D790071DD3D /* MoreData.json */,
 				CC86371B1ADF03DD0044EEF4 /* BondPlusCoreDataTests.xcdatamodeld */,
 				CC8637181ADF03470044EEF4 /* BondPlusCoreDataTests-Bridging.h */,
 				CC7C309E1AD7311E001B62D5 /* Supporting Files */,
@@ -390,6 +393,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC86372C1ADF07120044EEF4 /* SeedData.json in Resources */,
+				CCD644C11AE06D790071DD3D /* MoreData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -16,6 +16,7 @@ class NSFetchedResultsDynamicArraySpec: QuickSpec {
 
     var context: DataContext!
     var store: Store!
+    var importMore: (() -> ())!
     beforeEach {
       let bundle = NSBundle(forClass: self.classForCoder)
       // create DB
@@ -33,6 +34,17 @@ class NSFetchedResultsDynamicArraySpec: QuickSpec {
       
       store = EKManagedObjectMapper.objectFromExternalRepresentation(seedData["store"]! as! [NSObject: AnyObject], withMapping: Store.objectMapping(), inManagedObjectContext: context.managedObjectContext) as! Store
       context.managedObjectContext.processPendingChanges()
+      importMore = {
+        let url = bundle.URLForResource("MoreData", withExtension: "json")!
+        let file = NSInputStream(URL: url)!
+        file.open()
+        var parseError: NSError?
+        let moreData = NSJSONSerialization.JSONObjectWithStream(file, options: .allZeros, error: &parseError)! as! [String: AnyObject]
+        file.close()
+        let newItems = EKManagedObjectMapper.arrayOfObjectsFromExternalRepresentation(moreData["items"]! as! [[String: AnyObject]], withMapping: Item.objectMapping(), inManagedObjectContext: context.managedObjectContext) as! [Item]
+        store.mutableSetValueForKey("items").addObjectsFromArray(newItems)
+        context.managedObjectContext.processPendingChanges()
+      }
     }
     
     describe("Test Import") {
@@ -116,6 +128,19 @@ class NSFetchedResultsDynamicArraySpec: QuickSpec {
         expect(array.count).to(equal(2))
         expect(array[0].count).to(equal(2))
         expect(array[0].first!.name).to(equal("Banana"))
+      }
+      
+      it("should handle inserting many items (potentially out-of-order) correctly") {
+        let firstSectionBond = ArrayBond<Item>()
+        var insertedIndices = [Int]()
+        println("Items: \(array[0].value)")
+        firstSectionBond.willInsertListener = { array, indices in
+          insertedIndices += indices
+        }
+        array[0] ->> firstSectionBond
+        importMore()
+        println("Items: \(array[0].value)")
+        expect(insertedIndices).to(equal(Array(3...8)))
       }
 
       it("should handle update at 1,1 correctly") {

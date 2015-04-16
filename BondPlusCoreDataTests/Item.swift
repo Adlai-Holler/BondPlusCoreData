@@ -10,9 +10,9 @@ class Item: Base {
     @NSManaged var store: Store
     @NSManaged var itemType: String
 
-  override static func objectMapping() -> EKManagedObjectMapping {
+  override class func objectMapping() -> EKManagedObjectMapping {
     let s = super.objectMapping()
-    s.mapPropertiesFromArray(["name", "uuid", "count", "itemType"])
+    s.mapPropertiesFromArray(["name", "count", "itemType"])
     return s
   }
 }

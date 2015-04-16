@@ -120,7 +120,7 @@ public class NSFetchedResultsSectionDynamicArray<T: NSManagedObject>: DynamicArr
   }
 
   private func didChangeContent() {
-    for (obj, index) in pendingInserts {
+    for (obj, index) in sorted(pendingInserts, { $0.1 < $1.1 }) {
       insert(obj, atIndex: index)
     }
     for index in sorted(pendingDeletes, >) {

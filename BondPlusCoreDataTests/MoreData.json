@@ -1,0 +1,34 @@
+
+{"items": [{
+    "uuid": "4AA21305-1098-4398-876A-BD49F1D60445",
+    "name": "Dragonfruit",
+    "count": 5,
+    "itemType": "fruit"
+  },{
+    "uuid": "A4365051-AE3B-44F8-B560-4D6C19D1CD28",
+    "name": "Eggplant",
+    "count": 3,
+    "itemType": "fruit"
+  },{
+    "uuid": "2E7EBB45-FFD3-4046-838D-4E389DE883E2",
+    "name": "Fig",
+    "count": 0,
+    "itemType": "fruit"
+  },{
+    "uuid": "E800BEA6-766D-45EC-8D5B-05A31D989350",
+    "name": "Grapefruit",
+    "count": 1,
+    "itemType": "fruit"
+  },{
+    "uuid": "0F6C8A0E-0E35-427A-985B-4C7A3BA78197",
+    "name": "Honeydew",
+    "count": 5,
+    "itemType": "fruit"
+  },{
+    "uuid": "DEFD3E18-877E-4A5E-BD29-EBB39F74F84D",
+    "name": "Ice cream",
+    "count": 10,
+    "itemType": "fruit"
+  }
+]
+}

@@ -1,5 +1,5 @@
 github "Alecrim/AlecrimCoreData" "6a09d0195519371b0b15156e970698d7a37ccac6"
-github "SwiftBond/Bond" "v3.6.0"
+github "SwiftBond/Bond" "v3.7.0"
 github "EasyMapping/EasyMapping" "d40dc34268b7beb1423f5ed0834235c0401f3fe8"
 github "Quick/Nimble" "34faf0425ce6acd7acaf77e8bd297e3054fdd821"
 github "Quick/Quick" "9e1d2cecced0b9e9439c37226da11bad590ca9fd"

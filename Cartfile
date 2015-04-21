@@ -1,1 +1,1 @@
-github "adly-holler/Bond" "table-bond-improve"
+github "SwiftBond/Bond" ~> 3.7.1

@@ -1,1 +1,1 @@
-github "adly-holler/Bond" "no-disable-anim"
+github "SwiftBond/Bond" ~> 3.7.1

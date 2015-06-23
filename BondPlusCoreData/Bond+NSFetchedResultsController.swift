@@ -12,7 +12,7 @@ private class FRCDelegate: NSObject, NSFetchedResultsControllerDelegate {
   @objc private func controllerWillChangeContent(controller: NSFetchedResultsController) {
     willChangeContentHandler?()
   }
-
+  
   @objc private func controllerDidChangeContent(controller: NSFetchedResultsController) {
     didChangeContentHandler?()
   }
@@ -26,7 +26,7 @@ private class FRCDelegate: NSObject, NSFetchedResultsControllerDelegate {
   }
 }
 
-public class NSFetchedResultsDynamicArray<T: NSManagedObject>: DynamicArray<NSFetchedResultsSectionDynamicArray<T>> {
+public class NSFetchedResultsDynamicArray<T: NSManagedObject>: DynamicArray<DynamicArray<T>> {
   private let frc: NSFetchedResultsController
   private let frcDelegate = FRCDelegate()
   private var pendingInserts = [(NSFetchedResultsSectionDynamicArray<T>, Int)]()
@@ -55,23 +55,23 @@ public class NSFetchedResultsDynamicArray<T: NSManagedObject>: DynamicArray<NSFe
       switch type {
       case .Insert:
         let section = self[newIndexPath!.section]
-        section.didChangeObject(anObject, atIndex: nil, forChangeType: type, newIndex: newIndexPath!.item)
+        (section as! NSFetchedResultsSectionDynamicArray).didChangeObject(anObject, atIndex: nil, forChangeType: type, newIndex: newIndexPath!.item)
       case .Delete:
         let section = self[indexPath!.section]
-        section.didChangeObject(anObject, atIndex: indexPath!.item, forChangeType: type, newIndex: nil)
+        (section as! NSFetchedResultsSectionDynamicArray).didChangeObject(anObject, atIndex: indexPath!.item, forChangeType: type, newIndex: nil)
       case .Update:
         let section = self[indexPath!.section]
-        section.didChangeObject(anObject, atIndex: indexPath!.item, forChangeType: type, newIndex: nil)
+        (section as! NSFetchedResultsSectionDynamicArray).didChangeObject(anObject, atIndex: indexPath!.item, forChangeType: type, newIndex: nil)
       case .Move:
         if indexPath!.section == newIndexPath!.section {
           let section = self[indexPath!.section]
-          section.didChangeObject(anObject, atIndex: indexPath!.item, forChangeType: type, newIndex: newIndexPath!.item)
+          (section as! NSFetchedResultsSectionDynamicArray).didChangeObject(anObject, atIndex: indexPath!.item, forChangeType: type, newIndex: newIndexPath!.item)
         } else {
           let oldSection = self[indexPath!.section]
-          oldSection.didChangeObject(anObject, atIndex: indexPath!.item, forChangeType: .Delete, newIndex: nil)
+          (oldSection as! NSFetchedResultsSectionDynamicArray).didChangeObject(anObject, atIndex: indexPath!.item, forChangeType: .Delete, newIndex: nil)
           
           let newSection = self[newIndexPath!.section]
-          newSection.didChangeObject(anObject, atIndex: nil, forChangeType: .Insert, newIndex: newIndexPath!.item)
+          (newSection as! NSFetchedResultsSectionDynamicArray).didChangeObject(anObject, atIndex: nil, forChangeType: .Insert, newIndex: newIndexPath!.item)
         }
       }
     }
@@ -79,20 +79,20 @@ public class NSFetchedResultsDynamicArray<T: NSManagedObject>: DynamicArray<NSFe
     frcDelegate.willChangeContentHandler = {[unowned self] in
       assert(self.pendingInserts.isEmpty && self.pendingDeletes.isEmpty)
       for section in self {
-        section.willChangeContent()
+        (section as! NSFetchedResultsSectionDynamicArray).willChangeContent()
       }
     }
-
+    
     frcDelegate.didChangeContentHandler = {[unowned self] in
       for (section, index) in self.pendingInserts {
         self.insert(section, atIndex: index)
       }
       for index in sorted(self.pendingDeletes, >) {
         let deadSection = self.removeAtIndex(index)
-        deadSection.didChangeContent()
+        (deadSection as! NSFetchedResultsSectionDynamicArray).didChangeContent()
       }
       for section in self {
-        section.didChangeContent()
+        (section as! NSFetchedResultsSectionDynamicArray).didChangeContent()
       }
       self.pendingInserts.removeAll(keepCapacity: false)
       self.pendingDeletes.removeAll(keepCapacity: false)
@@ -100,7 +100,7 @@ public class NSFetchedResultsDynamicArray<T: NSManagedObject>: DynamicArray<NSFe
     
     frc.delegate = frcDelegate
   }
-
+  
 }
 
 public class NSFetchedResultsSectionDynamicArray<T: NSManagedObject>: DynamicArray<T> {
@@ -118,7 +118,7 @@ public class NSFetchedResultsSectionDynamicArray<T: NSManagedObject>: DynamicArr
   private func willChangeContent() {
     assert(pendingInserts.isEmpty && pendingDeletes.isEmpty && pendingUpdates.isEmpty, "changing content while already changing content")
   }
-
+  
   private func didChangeContent() {
     for (obj, index) in pendingInserts {
       insert(obj, atIndex: index)
@@ -152,5 +152,5 @@ public class NSFetchedResultsSectionDynamicArray<T: NSManagedObject>: DynamicArr
       pendingUpdates.append(index!)
     }
   }
-
+  
 }

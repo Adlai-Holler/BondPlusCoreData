@@ -173,7 +173,10 @@
 				503EAEA1A84DCEB1518990E3 /* Pods */,
 				95225210CDFE30E999A0151A /* Frameworks */,
 			);
+			indentWidth = 2;
 			sourceTree = "<group>";
+			tabWidth = 2;
+			usesTabs = 0;
 		};
 		CC7C308F1AD7311E001B62D5 /* Products */ = {
 			isa = PBXGroup;
@@ -351,6 +354,8 @@
 		CC7C30851AD7311E001B62D5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = adly;
 				TargetAttributes = {

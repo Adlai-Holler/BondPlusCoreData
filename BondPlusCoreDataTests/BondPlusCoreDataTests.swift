@@ -4,14 +4,14 @@ import Nimble
 import Quick
 import BondPlusCoreData
 import Bond
-import AlecrimCoreData
-
-class DataContext: Context {
-  var stores:      Table<Store>     { return Table<Store>(context: self) }
-  var items: Table<Item> { return Table<Item>(context: self) }
-}
 
 class NSFetchedResultsDynamicArraySpec: QuickSpec {
+	override func spec() {
+		it("should fail because the spec is disabled") {
+			expect(true).to(beFalse())
+		}
+	}
+	/*
   override func spec() {
 
     var context: DataContext!
@@ -176,4 +176,5 @@ class NSFetchedResultsDynamicArraySpec: QuickSpec {
     }
     
   }
+*/
 }

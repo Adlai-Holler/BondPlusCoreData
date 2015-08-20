@@ -34,8 +34,11 @@ public class NSFetchedResultsDynamicArray<T: NSManagedObject>: DynamicArray<Dyna
   
   public init(fetchedResultsController: NSFetchedResultsController) {
     self.frc = fetchedResultsController
-    frc.performFetch(nil)
-    let sections = fetchedResultsController.sections as! [NSFetchedResultsSectionInfo]
+    do {
+      try frc.performFetch()
+    } catch _ {
+    }
+    let sections = fetchedResultsController.sections!
     super.init(sections.map { NSFetchedResultsSectionDynamicArray(section: $0) })
     
     frcDelegate.didChangeSectionHandler = {[unowned self]sectionInfo, sectionIndex, type in
@@ -87,7 +90,7 @@ public class NSFetchedResultsDynamicArray<T: NSManagedObject>: DynamicArray<Dyna
       for (section, index) in self.pendingInserts {
         self.insert(section, atIndex: index)
       }
-      for index in sorted(self.pendingDeletes, >) {
+      for index in self.pendingDeletes.sort(>) {
         let deadSection = self.removeAtIndex(index)
         (deadSection as! NSFetchedResultsSectionDynamicArray).didChangeContent()
       }
@@ -120,10 +123,10 @@ public class NSFetchedResultsSectionDynamicArray<T: NSManagedObject>: DynamicArr
   }
   
   private func didChangeContent() {
-    for (obj, index) in sorted(pendingInserts, { $0.1 < $1.1 }) {
+    for (obj, index) in pendingInserts.sort({ $0.1 < $1.1 }) {
       insert(obj, atIndex: index)
     }
-    for index in sorted(pendingDeletes, >) {
+    for index in pendingDeletes.sort(>) {
       removeAtIndex(index)
     }
     for index in pendingUpdates {

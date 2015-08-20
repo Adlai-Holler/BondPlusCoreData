@@ -1,5 +1,4 @@
-github "Alecrim/AlecrimCoreData" "fa45da59689dcde43b8ed8d9e0bcd3c941bdf727"
-github "tripstr/Bond" "24f8910ca36f897a406cadbe51d355879bead616"
+github "tripstr/Bond" "137a66438833ccbf5279287aad76d2a6681e11ec"
 github "EasyMapping/EasyMapping" "0.14.2"
-github "Quick/Nimble" "v0.4.2"
-github "Quick/Quick" "v0.3.1"
+github "Quick/Nimble" "v2.0.0-rc.2"
+github "Quick/Quick" "v0.5.1"

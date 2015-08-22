@@ -2,6 +2,7 @@
 import CoreData
 import Bond
 
+public var bondPlusCoreDataShouldLog = false
 /// methods in generic classes don't expose themselves to Objective-C, so we use this helper to forward our notifications
 private class FRCDelegate: NSObject, NSFetchedResultsControllerDelegate {
   
@@ -18,10 +19,15 @@ private class FRCDelegate: NSObject, NSFetchedResultsControllerDelegate {
   }
   
   @objc private func controller(controller: NSFetchedResultsController, didChangeObject anObject: AnyObject, atIndexPath indexPath: NSIndexPath?, forChangeType type: NSFetchedResultsChangeType, newIndexPath: NSIndexPath?) {
-    // workaround weird bug in Xcode 7 beta 5
-    if type.rawValue == 0 { return }
-    print("FRC callback with raw change type: \(type.rawValue), object: \(anObject)")
-    if type == .Insert { print("FRC did insert at index: \(newIndexPath!.item)") }
+    
+    // workaround weird bug in Xcode 7 beta 5. There is no change type 0. In some cases this is interpreted as .Insert.
+    if type.rawValue == 0 {
+      if bondPlusCoreDataShouldLog {
+        print("Invalid change type \(type.rawValue) received for NSFetchedResultsDynamicArray. Ignoring…")
+      }
+      return
+    }
+    
     didChangeObjectHandler?(anObject: anObject, indexPath: indexPath, type: type, newIndexPath: newIndexPath)
   }
   
@@ -59,7 +65,6 @@ public class NSFetchedResultsDynamicArray<T: NSManagedObject>: DynamicArray<Dyna
     }
     
     frcDelegate.didChangeObjectHandler = {[unowned self]anObject, indexPath, type, newIndexPath in
-      print("didChangeObjectHandler called: \(type.rawValue)")
       switch type {
       case .Insert:
         let section = self[newIndexPath!.section]
@@ -129,7 +134,6 @@ public class NSFetchedResultsSectionDynamicArray<T: NSManagedObject>: DynamicArr
   
   private func didChangeContent() {
     for (obj, index) in pendingInserts.sort({ $0.1 < $1.1 }) {
-      print("Dispatching insert at index: \(index)")
       insert(obj, atIndex: index)
     }
     for index in pendingDeletes.sort(>) {
@@ -141,8 +145,6 @@ public class NSFetchedResultsSectionDynamicArray<T: NSManagedObject>: DynamicArr
     pendingInserts.removeAll(keepCapacity: false)
     pendingUpdates.removeAll(keepCapacity: false)
     pendingDeletes.removeAll(keepCapacity: false)
-    precondition(pendingInserts.isEmpty)
-    print("Pending inserts cleared!")
   }
   
   private func didChangeObject(anObject: AnyObject, atIndex index: Int?, forChangeType type: NSFetchedResultsChangeType, newIndex: Int?) {
@@ -150,7 +152,6 @@ public class NSFetchedResultsSectionDynamicArray<T: NSManagedObject>: DynamicArr
     case .Delete:
       pendingDeletes.append(index!)
     case .Insert:
-      print("Enqueued pending insert: \(newIndex!)")
       pendingInserts.append(anObject as! T, newIndex!)
     case .Move:
       if newIndex! < index! {

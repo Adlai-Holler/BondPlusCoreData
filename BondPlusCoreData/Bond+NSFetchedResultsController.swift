@@ -135,6 +135,7 @@ public class NSFetchedResultsSectionDynamicArray<T: NSManagedObject>: DynamicArr
     pendingInserts.removeAll(keepCapacity: false)
     pendingUpdates.removeAll(keepCapacity: false)
     pendingDeletes.removeAll(keepCapacity: false)
+    precondition(pendingInserts.isEmpty)
   }
   
   private func didChangeObject(anObject: AnyObject, atIndex index: Int?, forChangeType type: NSFetchedResultsChangeType, newIndex: Int?) {

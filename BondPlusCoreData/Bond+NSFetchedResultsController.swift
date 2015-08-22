@@ -138,6 +138,7 @@ public class NSFetchedResultsSectionDynamicArray<T: NSManagedObject>: DynamicArr
     pendingUpdates.removeAll(keepCapacity: false)
     pendingDeletes.removeAll(keepCapacity: false)
     precondition(pendingInserts.isEmpty)
+    print("Pending inserts cleared!")
   }
   
   private func didChangeObject(anObject: AnyObject, atIndex index: Int?, forChangeType type: NSFetchedResultsChangeType, newIndex: Int?) {
@@ -145,6 +146,7 @@ public class NSFetchedResultsSectionDynamicArray<T: NSManagedObject>: DynamicArr
     case .Delete:
       pendingDeletes.append(index!)
     case .Insert:
+      print("Enqueued pending insert: \(newIndex!)")
       pendingInserts.append(anObject as! T, newIndex!)
     case .Move:
       if newIndex! < index! {

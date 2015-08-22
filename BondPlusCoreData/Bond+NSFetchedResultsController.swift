@@ -56,6 +56,7 @@ public class NSFetchedResultsDynamicArray<T: NSManagedObject>: DynamicArray<Dyna
     }
     
     frcDelegate.didChangeObjectHandler = {[unowned self]anObject, indexPath, type, newIndexPath in
+      print("didChangeObjectHandler called: \(type)")
       switch type {
       case .Insert:
         let section = self[newIndexPath!.section]

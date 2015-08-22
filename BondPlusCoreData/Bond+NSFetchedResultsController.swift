@@ -18,6 +18,7 @@ private class FRCDelegate: NSObject, NSFetchedResultsControllerDelegate {
   }
   
   @objc private func controller(controller: NSFetchedResultsController, didChangeObject anObject: AnyObject, atIndexPath indexPath: NSIndexPath?, forChangeType type: NSFetchedResultsChangeType, newIndexPath: NSIndexPath?) {
+    if type == .Insert { print("FRC did insert at index: \(newIndexPath!.item)") }
     didChangeObjectHandler?(anObject: anObject, indexPath: indexPath, type: type, newIndexPath: newIndexPath)
   }
   
@@ -124,6 +125,7 @@ public class NSFetchedResultsSectionDynamicArray<T: NSManagedObject>: DynamicArr
   
   private func didChangeContent() {
     for (obj, index) in pendingInserts.sort({ $0.1 < $1.1 }) {
+      print("Dispatching insert at index: \(index)")
       insert(obj, atIndex: index)
     }
     for index in pendingDeletes.sort(>) {

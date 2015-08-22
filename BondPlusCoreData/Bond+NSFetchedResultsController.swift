@@ -18,6 +18,8 @@ private class FRCDelegate: NSObject, NSFetchedResultsControllerDelegate {
   }
   
   @objc private func controller(controller: NSFetchedResultsController, didChangeObject anObject: AnyObject, atIndexPath indexPath: NSIndexPath?, forChangeType type: NSFetchedResultsChangeType, newIndexPath: NSIndexPath?) {
+    // workaround weird bug in Xcode 7 beta 5
+    if type.rawValue == 0 { return }
     print("FRC callback with raw change type: \(type.rawValue), object: \(anObject)")
     if type == .Insert { print("FRC did insert at index: \(newIndexPath!.item)") }
     didChangeObjectHandler?(anObject: anObject, indexPath: indexPath, type: type, newIndexPath: newIndexPath)
